@@ -1,0 +1,17 @@
+<section id="honesty" class="alt">
+<p class="eyebrow">Honesty checks</p>
+<h2>Is the score real?</h2>
+<div class="split">
+<img src="/_blob/09704776151023507075946f52b8821c" alt="Bar chart of ROC-AUC, temporal split vs random 5-fold CV. Phase 1 to 2: 0.71 vs 0.71. Phase 2 to 3: 0.72 vs 0.75. Phase 3 to FDA: 0.80 vs 0.88." style="width:800px; height:500px; object-fit:contain; background:#FCFCFB; border-radius:16px;">
+<div class="notes">
+<p class="note"><b>Random splits flatter:</b> random 5-fold CV adds +0.08 at Phase 3, because one drug’s trials share one approval. We report the temporal split.</p>
+<p class="note"><b>Unseen drugs:</b> on test drugs never seen in training, AUC stays at 0.70 / 0.72 / 0.80, so the model is not memorising names.</p>
+<p class="note"><b>Leaky features out:</b> actual enrollment or trial status would inflate AUC; we never use them.</p>
+<p class="note"><b>18 framings explored:</b> the ones that score higher mix easy populations (appendix).</p>
+</div>
+</div>
+<aside>- The same model scores 0.883 at Phase 3 with a random split vs 0.802 with the honest temporal split: the random split lets the model see other trials of the same drug, which share one approval outcome.
+- Test drugs never seen in training score almost the same, so the model learns patterns, not drug names.
+- Features that only exist after a trial ends (actual enrollment, status, posted results) are excluded.
+- We tried 18 framings; several reach 0.79 to 0.85 but only because they mix in easy cases, such as mature drugs or academic trials.</aside>
+</section>

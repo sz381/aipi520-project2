@@ -1,0 +1,20 @@
+{
+  "v": 5,
+  "createdOnFiles": {"v": 1, "at": "2026-11-24T08:30:00Z"},
+  "lists": "css",
+  "format": {"v": 1, "shared": ["project/deck.css"]},
+  "title": "Predicting a New Drug’s Journey",
+  "order": ["cover", "why", "scope", "pipeline", "labels", "labelcheck", "features", "method", "results", "hitrates", "drivers", "honesty", "interpret", "close", "appendix"],
+  "sections": {
+    "s1": {"description": "Why predicting trial success matters and how we scoped the problem.", "start": "cover"},
+    "s2": {"description": "Data pipeline, how each gate is labelled, and how we checked the labels.", "start": "pipeline"},
+    "s3": {"description": "Features, models and the evaluation method.", "start": "features"},
+    "s4": {"description": "Results, what drives each gate, and honesty checks.", "start": "results"},
+    "s5": {"description": "Interpretation, limitations and takeaways.", "start": "interpret"}
+  },
+  "faces": {
+    "space-grotesk": {"family": "Space Grotesk", "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"},
+    "inter": {"family": "Inter", "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"}
+  },
+  "designSystems": []
+}

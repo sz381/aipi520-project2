@@ -1,0 +1,14 @@
+<section id="drivers">
+<p class="eyebrow">What drives each gate</p>
+<h2>Drug history drives every gate</h2>
+<img src="/_blob/5c469b44c0b979e970f296a44001fb30" alt="Three panels of permutation importance. Phase 1 to 2: years since the drug's first trial, crossover design, sponsor's earlier trials. Phase 2 to 3: number of the drug's trials in the last 2 years, number of secondary outcomes. Phase 3 to FDA: number of conditions tested, number of earlier Phase 2 trials." style="width:1664px; height:400px; object-fit:contain; align-self:center; background:#FCFCFB; border-radius:16px;">
+<div class="facts">
+<div class="fact"><p class="k">19% → 60%</p><p>Phase 2 → 3 pass rate: 0 vs 3+ other trials of the drug in the last 2 years</p></div>
+<div class="fact"><p class="k">13% → 58%</p><p>FDA approval rate: drug tested in 0–1 vs 6+ conditions before</p></div>
+<div class="fact"><p class="k">27% vs 44%</p><p>Phase 1 → 2: crossover (PK-style) designs vs other Phase 1 trials</p></div>
+</div>
+<aside>- Permutation importance: how much test AUC drops when one feature is shuffled.
+- Removing the whole drug-history group costs 0.11, 0.07 and 0.13 AUC at the three gates, more than any other group.
+- Plain-language version: a company that keeps running trials of a drug, in more diseases, is signalling conviction, and those drugs move on.
+- Surprise: a sponsor’s own past success rate adds nothing once drug history is known.</aside>
+</section>

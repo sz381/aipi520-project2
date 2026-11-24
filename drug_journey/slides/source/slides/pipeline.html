@@ -1,0 +1,23 @@
+<section id="pipeline" class="alt">
+<p class="eyebrow">Data pipeline</p>
+<h2>613,113 messy records, three clean tables</h2>
+<div class="flow">
+<div class="step"><p class="num">613,113</p><p class="txt">trial records, one XML file each</p></div>
+<x-shape kind="arrow-right" class="flow-arrow"></x-shape>
+<div class="step"><p class="num">467,911</p><p class="txt">interventional trials parsed into one table</p></div>
+<x-shape kind="arrow-right" class="flow-arrow"></x-shape>
+<div class="step"><p class="num">Clean</p><p class="txt">normalise drug and condition names</p></div>
+<x-shape kind="arrow-right" class="flow-arrow"></x-shape>
+<div class="step"><p class="num">Label</p><p class="txt">later trials + FDA approvals; ~80 features</p></div>
+<x-shape kind="arrow-right" class="flow-arrow"></x-shape>
+<div class="step"><p class="num">Model</p><p class="txt">3 gates × 4 models, temporal split</p></div>
+</div>
+<div class="cards">
+<div class="card"><h3>One drug, many names</h3><p class="label">MK-3475 = pembrolizumab = Keytruda. Synonyms learned from each trial’s “other name” field and expanded one hop only: a full transitive merge chained every chemotherapy into a single 32,000-name “drug”.</p></div>
+<div class="card"><h3>Background drugs ignored</h3><p class="label">“New drug X + cisplatin” must not look successful because cisplatin is in hundreds of later trials. A drug with 10+ earlier Phase 3 trials is treated as background.</p></div>
+</div>
+<aside>- Instructor said the data is messy: free-text drug and disease names. This is where most of our effort went.
+- Parsing all XML takes about one minute; everything downstream reads one table.
+- Synonyms: one-hop expansion only; the naive approach produced one giant connected component.
+- Background drugs: without this rule, combination trials would be labelled successful by accident.</aside>
+</section>

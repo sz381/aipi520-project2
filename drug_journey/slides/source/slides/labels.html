@@ -1,0 +1,20 @@
+<section id="labels">
+<p class="eyebrow">Labels</p>
+<h2>No outcomes in the data, so we built them</h2>
+<table>
+<tr><th style="width:20%">Gate</th><th style="width:46%">Labelled “passed” if the drug…</th><th style="width:10%">Window</th><th style="width:12%">Trials</th><th style="width:12%">Passed</th></tr>
+<tr><td>Phase 1 → 2</td><td>starts a Phase 2 (or later) trial</td><td>6 yr</td><td>6,769</td><td>41%</td></tr>
+<tr><td>Phase 2 → 3</td><td>starts a Phase 3 trial</td><td>6 yr</td><td>7,041</td><td>33%</td></tr>
+<tr><td>Phase 3 → FDA</td><td>gets its first FDA approval (Drugs@FDA)</td><td>8 yr</td><td>3,114</td><td>37%</td></tr>
+</table>
+<div class="cards">
+<div class="card"><h3>Lecture’s three ideas</h3><p class="label">“If there’s a Phase 3, Phase 2 succeeded”, the same for Phase 1, and FDA records for Phase 3.</p></div>
+<div class="card"><h3>Matching FDA names</h3><p class="label">Salts (naldemedine <i>tosylate</i>) and biologic suffixes (aducanumab<i>-avwa</i>) stripped; vaccines and non-US trials excluded.</p></div>
+<div class="card"><h3>Fair time window</h3><p class="label">Only trials started 2005–2019, so a recent trial is never called a failure just because it is young.</p></div>
+</div>
+<aside>- The database never says whether a trial succeeded; label engineering was the core of the project.
+- Gates 1 and 2: look for a later trial of the same drug in the next phase within 6 years.
+- Gate 3: official FDA approval records (Drugs@FDA, original NDA or BLA approvals, generics excluded), within 8 years.
+- Name matching problems we had to solve: salt names and the 4-letter suffix on biologics approved after 2017.
+- Vaccines are regulated by CBER and are not in Drugs@FDA, so we dropped them; non-US trials rarely seek FDA approval.</aside>
+</section>

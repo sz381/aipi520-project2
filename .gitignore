@@ -1,3 +1,6 @@
+# Local exploration archive (not part of the submission; the final work is in drug_journey/)
+claude_trials/
+
 # Data (ClinicalTrials.gov dump is ~18 GB: raw XML, zip, and anything derived from it)
 data/
 *.zip
@@ -25,3 +28,5 @@ env/
 .DS_Store
 .vscode/
 .idea/
+
+

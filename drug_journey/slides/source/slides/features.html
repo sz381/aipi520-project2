@@ -1,0 +1,18 @@
+<section id="features" class="alt">
+<p class="eyebrow">Features</p>
+<h2>80 features, all known at trial start</h2>
+<div class="grid4">
+<div class="mini"><h3>Drug history</h3><p>trials so far, years since first trial, conditions tested</p></div>
+<div class="mini"><h3>Trial design</h3><p>randomised, blinding, arms, placebo, number of endpoints</p></div>
+<div class="mini"><h3>Disease</h3><p>12 therapeutic areas, past success rate in the condition</p></div>
+<div class="mini"><h3>Sponsor</h3><p>earlier trials, past Phase 2 → 3 rate</p></div>
+<div class="mini"><h3>Geography</h3><p>sites and countries; US, Europe, East Asia</p></div>
+<div class="mini"><h3>Eligibility</h3><p>criteria length and count, ages, healthy volunteers</p></div>
+<div class="mini"><h3>Text</h3><p>TF-IDF of title, summary and primary outcomes</p></div>
+<div class="mini warn"><h3>Never used</h3><p>actual enrollment, status, posted results: they leak the answer</p></div>
+</div>
+<p class="body">Every history feature only counts trials that started <b>before</b> this one, so the model never sees the future.</p>
+<aside>- Seven groups plus text. Drug history matters most, as the next slides show.
+- Time-safe: counts such as “trials of this drug so far” only look backward from the trial start date.
+- Deliberately excluded: actual enrollment (terminated trials enrol fewer people), status and results. Adding them would raise AUC dishonestly.</aside>
+</section>

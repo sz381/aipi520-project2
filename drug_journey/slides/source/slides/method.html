@@ -1,0 +1,18 @@
+<section id="method">
+<p class="eyebrow">Models and evaluation</p>
+<h2>Learn from the past, test on the future</h2>
+<div class="timeline">
+<div class="seg train"><p class="t">Train</p><p>trials started 2012 or earlier</p></div>
+<div class="seg val"><p class="t">Validate</p><p>2013–14</p></div>
+<div class="seg test"><p class="t">Test</p><p>2015 onward, scored once</p></div>
+</div>
+<div class="cards">
+<div class="card"><h3>Four models per gate</h3><p class="label">Logistic regression, random forest, gradient boosting, and a TF-IDF text model.</p></div>
+<div class="card"><h3>Chosen on validation</h3><p class="label">Hyper-parameters and the tree + text blend weight are picked on 2013–14 trials only.</p></div>
+<div class="card"><h3>Metrics</h3><p class="label">ROC-AUC (main), PR-AUC, Brier score, and 95% bootstrap confidence intervals.</p></div>
+</div>
+<aside>- A temporal split mimics real use: we only ever know the past when we predict a new trial.
+- Four models per gate. The final model is the best tree model blended with the text model; everything is chosen on the validation years.
+- The test years are touched once, at the end.
+- Main metric ROC-AUC; we also report PR-AUC, calibration (Brier) and bootstrap confidence intervals.</aside>
+</section>
