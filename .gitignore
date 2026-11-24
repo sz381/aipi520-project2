@@ -1,0 +1,27 @@
+# Data (ClinicalTrials.gov dump is ~18 GB: raw XML, zip, and anything derived from it)
+data/
+*.zip
+*.parquet
+*.feather
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models / outputs
+*.pkl
+*.joblib
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
